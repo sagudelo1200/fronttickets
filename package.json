@@ -1,0 +1,29 @@
+{
+  "name": "frontlogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "dev": "nodemon index.js --exec babel-node",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "html-pdf": "^3.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.5"
+  }
+}

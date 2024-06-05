@@ -1,0 +1,39 @@
+<%- include("partial/partials.dash.header.ejs", {datos : datos}) %>
+
+<!-- Vista de creacion de encuesta -->
+
+<div class="box box-warning">
+    <div class="box-header with-border">
+      <h3 class="box-title">LLenar encuesta</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <form role="form">
+
+        <!-- textarea -->
+        <div class="form-group">
+          <label for="satisfaccion">Satisfaccion tiempo de respuesta</label>
+          <textarea id="satisfaccion" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+        </div>
+    
+
+        <!-- textarea -->
+        <div class="form-group">
+          <label for="ayudarecibida">Como fue la ayuda recibida?</label>
+          <textarea id="ayudarecibida" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+        </div>
+
+        <!-- textarea -->
+        <div class="form-group">
+          <label for="soluciondelproblema">Te sirvio la solucion recibida?</label>
+          <textarea id="soluciondelproblema" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+        </div>
+
+      </form>    
+    </div> 
+    <div class="box-footer">
+      <button type="button" onclick="crearEncuesta()" class="btn btn-block btn-primary">Enviar</button>
+    </div>
+</div>   
+       
+  <%- include("partial/partials.dash.footer.ejs") %>

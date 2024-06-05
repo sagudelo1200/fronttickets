@@ -1,0 +1,32 @@
+<%- include("partial/partials.dash.header.ejs", {datos : datos}) %>
+
+<!-- Vista de comentarios y nuevas funciones -->
+
+<div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Aqui puedes dejar tus comentarios y contarnos que nuevas funciones o caracteristicas te gustaria ver en la pagina.</h3>
+    </div>
+    <br>
+    <br>
+    <!-- /.box-header -->
+    <!-- form start -->
+         <!-- textarea -->
+         <div class="form-group">
+            <label for="comentario">Comentarios</label>
+            <textarea id="comentario" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+          </div>
+      
+  
+          <!-- textarea -->
+          <div class="form-group">
+            <label for="caracteristica">caracteristicas y/o funcionalidades</label>
+            <textarea id="caracteristica" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+          </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+        <button type="submit" onclick="caracteristicas()" class="btn btn-info pull-right">Enviar</button>
+      </div>
+      <!-- /.box-footer -->
+    </form>
+  </div>
+<%- include("partial/partials.dash.footer.ejs") %>

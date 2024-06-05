@@ -1,0 +1,73 @@
+<%- include("partial/partials.dash.header.ejs", {datos : datos}) %>
+
+<!-- Modificar usuarios -->
+<div class="modal modal-info fade" id="modal-info">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modificar usuario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="user">usuario</label>
+                            <input type="text" id="user" class="form-control" placeholder="ingrese usuario">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" class="form-control" placeholder="ingrese nombre">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Clave</label>
+                            <input type="password" id="password" class="form-control"
+                                placeholder="Ingrese su nueva clave">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline" onclick="modificarUsuario();">Guardar</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+
+<div class="box-body">
+    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+      <thead>
+      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Usuario</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Nombre</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">clave</th>
+    </thead>
+      </thead>
+      <!-- Traer y ver la lista de los usuarios -->
+        <% data.forEach(function(registro){ %>
+      <tr role="row" class="odd">
+        <td class=><%= registro.iduser %></td>
+        <td> <%= registro.user %></td>
+        <td> <%= registro.name %></td>
+        <td> <%= registro.password %></td>
+        <td>  <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-info"
+            onclick="cargarUsuario(event)">Modifica</button> </td>
+        <td>
+            <button type="button" class="btn btn-block btn-danger btn-sm" id="elimina" onclick="eliminaRegistro(event)">Elimina</button></td>
+            <td>
+                <button type="button" class="btn btn-success" id="elimina" onclick="reporte(event)">Reporte</button></td>
+            <% }) %>
+
+      
+      <input type="hidden" id="iduser"></input>
+    </table></div></div>
+    </div></div>
+
+
+
+ 
+<%- include("partial/partials.dash.footer.ejs") %>
+

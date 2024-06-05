@@ -1,0 +1,62 @@
+<%- include("partial/partials.dash.header.ejs", {datos : datos}) %>
+
+<!-- Vista de creacion de tickets -->
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border b">
+        <h3 class="box-title">Nuevo Ticket</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+            <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+          <!-- // Columna 2// -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" class="form-control" placeholder="">
+                    <div class="form-group">
+                        <label for="nombre_usuario">Nombre</label>
+                        <input type="text" id="nombre_usuario" class="form-control"  placeholder="Nombre">
+                      </div>
+                  </div>
+                <div class="form-group">
+                    <label for="email_cliente">Correo</label>
+                    <input type="email" id="email_cliente" class="form-control" placeholder="Ingrese su correo">
+                  </div>
+                 
+            </div>
+            <!-- // Columna 2// -->
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="prioridad">prioridad</label>
+                <input type="text" class="form-control" id="prioridad" placeholder=" Ingrese prioridad">
+              </div>
+                <div class="form-group">
+                    <label for="mensaje">problema</label>
+                    <input type="text" id="mensaje" class="form-control"  placeholder="Ingrese el problema">
+                  </div>
+                  <div class="form-group">
+                    <label for="archivo">Archivo</label>
+                    <input type="file" id="archivo" class="form-control"  placeholder="adjunte archivo">
+                  </div>    
+            </div>
+        </div>
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer">
+        <button type="button" onclick="crearTicket()" class="btn btn-block btn-primary">Enviar</button>
+      </div>
+      <!-- /.box-footer-->
+    </div>
+    <!-- /.box -->
+  </section>
+<%- include("partial/partials.dash.footer.ejs") %>

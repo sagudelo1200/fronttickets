@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/loginstyle.css">
+	<link rel="stylesheet" href="./js/alertifyjs/css/alertify.min.css">
+	<link rel="stylesheet" href="./js/alertifyjs/css/themes/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- Vista de el login y de el registro -->
+<h2></h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Crear cuenta</h1>
+			<div class="social-container">
+				<a href="https://es-la.facebook.com/login/device-based/regular/login/"><img src="img/facebookicono.png" width="30px" height="30px"></a>
+				<a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Des&followup=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Des&hl=es&osid=1&passive=1209600&ifkv=AaSxoQzZwW8PG1U2qgLI7a3tDBX5R7-BfIvCNBxDNFkLFydnzvz4ELfDd05i0OxVBoir09P6iqmZRw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin" ><img src="img/google.png" width="30px" height="30px"></a>
+				<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=152&ct=1715810831&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26culture%3des-co%26country%3dco%26RpsCsrfState%3dcf10fe3f-673d-7aad-cfe8-411aacecd467&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" ><img src="img/outlook.png" width="30px" height="30px"></a>
+			</div>
+			<span>o usa tu usuario para registrarte</span>
+			<input type="text" id="usuario" placeholder="Usuario" />
+			<input type="text" id="nombre" placeholder="Nombre" />
+			<input type="password" id="contrasena" placeholder="Contraseña" />
+			<button onclick="registrarUsuario()">Registrarse</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Inicio</h1>
+			<div class="social-container">
+				<a href="https://es-la.facebook.com/login/device-based/regular/login/"><img src="img/facebookicono.png" width="30px" height="30px"></a>
+				<a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Des&followup=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Des&hl=es&osid=1&passive=1209600&ifkv=AaSxoQzZwW8PG1U2qgLI7a3tDBX5R7-BfIvCNBxDNFkLFydnzvz4ELfDd05i0OxVBoir09P6iqmZRw&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="img/google.png" width="30px" height="30px"></a>
+				<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=152&ct=1715810831&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26culture%3des-co%26country%3dco%26RpsCsrfState%3dcf10fe3f-673d-7aad-cfe8-411aacecd467&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c"><img src="img/outlook.png" width="30px" height="30px"></i></a>
+			</div>
+			<span>o usa tu cuenta</span>
+			<input type="text"  id="user" placeholder="Usuario" />
+			<input type="password" id="password" placeholder="Contraseña" />
+			<!-- <button onclick="login()"> -->
+				<button onclick="logueese()">Iniciar sesión</button>
+				
+			<!-- </button> -->
+			
+
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido de nuevo!</h1>
+				<p>Por favor ingresa tus datos personales</p>
+				<button class="ghost" id="signIn">Iniciar sesión</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola, Bienvenido a TD!</h1>
+				<p>Ingresa tus datos personales y comienza tu experiencia con nosotros</p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		<i class="fa fa-heart"></i>
+		<a target="_blank" href=""></a>
+		
+		<a target="_blank" href=""></a>.
+	</p>
+</footer>
+<script src="./js/alertifyjs/alertify.min.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
