@@ -17,17 +17,18 @@ export const listarTicket = async(req, res) => {
     const url = process.env.URL_BACKEND + "/tickets";
 
     
+console.log(url);
 
-    const blob = new Blob([string], {
-        type: 'image/jpeg' // or whatever your Content-Type is
-      });
-    const string = await blob.text();
+    // const blob = new Blob([string], {
+    //     type: 'image/jpeg' // or whatever your Content-Type is
+    //   });
+    // const string = await blob.text();
 
     fetch(url)
     .then(respuesta=>respuesta.json())
     .then(data=>{
-        const type = blob.type;
-        const blob2 = new Blob([string], {type: type});
+        // const type = blob.type;
+        // const blob2 = new Blob([string], {type: type});
         
         res.render("views.listatickets.ejs",
         {
