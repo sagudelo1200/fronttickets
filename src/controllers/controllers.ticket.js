@@ -14,10 +14,9 @@ export const crearEncuesta = (req, res) => {
 //Ir a la lista de tickets
 export const listarTicket = async(req, res) => {
    
-    const url = process.env.URL_BACKEND + "/tickets";
+    const url = process.env.URL_BACKEND + "/api/tickets";
 
-    
-console.log(url);
+    console.log(url);
 
     // const blob = new Blob([string], {
     //     type: 'image/jpeg' // or whatever your Content-Type is
@@ -29,7 +28,10 @@ console.log(url);
     .then(data=>{
         // const type = blob.type;
         // const blob2 = new Blob([string], {type: type});
-        
+        // data.forEach(element => {
+        //     element = createObjectURL(element.archivo)
+        // });
+        // sessionStorage.setItem("urlBtk", urlBtk);
         res.render("views.listatickets.ejs",
         {
             "datos": "ho@gmail.com",

@@ -111,7 +111,7 @@ const crearTicket = async(req, res) => {
      }
      const myBlob = archivo.files[0];
      const carturado = await blobToBase64(myBlob); 
-     archivo = (await b64ToBlob(carturado ,"png"));
+     archivo = (await b64ToBlob(carturado ,"jpg"));
 
      const options = {
         method: "POST",
