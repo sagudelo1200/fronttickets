@@ -58,7 +58,7 @@ export const caracteristicas = (req, res) => {
 
 //ir a solucion
 export const solucion = (req, res) => {
-    const url = process.env.URL_BACKEND + "/solucion";
+    const url = process.env.URL_BACKEND + "/api/solucion";
 
     fetch(url)
     .then(respuesta=>respuesta.json())

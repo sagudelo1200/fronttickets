@@ -7,6 +7,7 @@ config();
 
 const app = express();
 const __dirname = path.join(process.cwd(),"src");
+
 console.log(__dirname);
 //Views de .ejs
 app.set('view engine','ejs');

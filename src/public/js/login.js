@@ -27,7 +27,7 @@ const logueese = () => {
         document.cookie= `token=${data.token}`;
         console.log(data.token);
         if(data.token !== undefined){
-        window.location.href="/dash";
+        window.location.href="/inicio";
         }else{
             alertify.error('Clave errada');
         }

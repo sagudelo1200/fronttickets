@@ -45,8 +45,10 @@ const registrarUsuario = (req, res) => {
     const nombre = document.getElementById('nombre').value;
     const contrasena = document.getElementById('contrasena').value;
   
-    const url = "https://backlogin-production.up.railway.app/api/usuario";
-
+    
+    const urlLogin = sessionStorage.getItem("urlLogin");
+  
+    const url = urlLogin + "/api/usuario";
     
     const headers = {
         'Content-Type': 'application/json'
@@ -101,9 +103,8 @@ const crearTicket = async(req, res) => {
     const prioridad = document.getElementById('prioridad').value;
     const mensaje = document.getElementById('mensaje').value;
     // const archivo = document.getElementById('archivo');
-   
 
-
+    
     const url = "https://backtickets-production.up.railway.app/api/tickets";
 
     const headers = {
@@ -142,29 +143,29 @@ const crearTicket = async(req, res) => {
 
 //Al darle al boton modifica cargar los datos para modificar
 const cargarUsuario = (event) =>{
-   
+    console.log("error");
     document.getElementById('iduser').value = event.target.parentElement.parentElement.children[0].innerHTML;
     document.getElementById('user').value = event.target.parentElement.parentElement.children[1].innerHTML;
     document.getElementById('name').value = event.target.parentElement.parentElement.children[2].innerHTML;
     document.getElementById('password').value = event.target.parentElement.parentElement.children[3].innerHTML;
-  
+ 
 }
 
 //Modificar usuario
 const modificarUsuario = () => {
-   
+    console.log("error1");
     const iduser = document.getElementById('iduser').value;
     const user = document.getElementById('user').value;
     const name = document.getElementById('name').value;
     const password = document.getElementById('password').value;
-
+    console.log("error2");
     const urlLogin = sessionStorage.getItem("urlLogin");
   
     const url = urlLogin + "/api/usuario";
-
+    console.log("error3");
     let token = "";
     const cookieToken = document.cookie;
-    console.log("error");
+    console.log("error4");
     if (cookieToken) {
         const cookies = cookieToken.split(';');
         cookies.forEach(cookie => {
@@ -182,12 +183,12 @@ const modificarUsuario = () => {
         alert("Debe loguearse nuevamente");
         return
     }
-    
+    console.log("error5");
     const headers = {
         'x-access-token': token,
         'Content-Type': 'application/json'
     }
-
+    console.log("error6");
     const options = {
         method: "PUT",
         body: JSON.stringify({
@@ -198,7 +199,7 @@ const modificarUsuario = () => {
         }),
         headers
     }
-    
+    console.log("error7");
     fetch(url, options)
         .then(res => res.json())
         .then(data => {
@@ -305,7 +306,10 @@ const atencionTicket = (req, res) => {
     const estado_ticket = document.getElementById('estado_ticket').value;
     const solucion = document.getElementById('solucion').value;
   
-    const url = "https://backtickets-production.up.railway.app/api/solucion";
+    const urlTickets = sessionStorage.getItem("urlTickets");
+  
+    const url = urlLogin + "/api/solucion";
+    
 
 
     const headers = {

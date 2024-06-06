@@ -1,5 +1,7 @@
 import { create } from 'html-pdf';
 import { exec } from 'child_process';
+import phantomjs from 'phantomjs-prebuilt';
+const options = { phantomPath: phantomjs.path };
 
 
 export const generar = async (req, res) => {
@@ -83,17 +85,17 @@ export const generar = async (req, res) => {
   <div class="container">
     <div class="header-bar"></div>
     <div class="footer-bar"></div>
-    <img src="ruta/a/la/imagen.jpg" alt="Imagen" class="header-image">
-    <h2>Carta de Ascenso</h2>
+   
+    <h2>Informe de Registro</h2>
     <p>Estimado/a ${name},</p>
-    <p>Nos complace informarte que has sido seleccionado/a para un ascenso dentro de nuestra empresa. Tu arduo trabajo, dedicación y contribuciones significativas han sido reconocidas y valoradas por todo el equipo.</p>
-    <p>El nuevo puesto, [Nombre del Nuevo Puesto], te brindará mayores responsabilidades y oportunidades de crecimiento profesional.</p>
-    <p>Por favor, encuentra a continuación tus datos de contacto actualizados:</p>
+    <p>Bienvenido! Nos complace informarte que te has registrado a nuestra pagina TickDesk. Aqui podras crear, actualizar y seguir el estado de tus tickets en tiempo real.</p>
+    <p>Encuentra problemas frecuentes para ayudarte a resolver problemas comunes. </p>
+    <p>Por favor, encuentra a continuación tus datos actualizados:</p>
     <div class="contact-info">
       <p><span>Usuario:</span> ${user}</p>
       <p><span>Nombre:</span> ${name}</p>
     </div>
-    <p>Te felicitamos nuevamente por este logro y esperamos que continúes teniendo éxito en tu trayectoria con nosotros.</p>
+    <p>Te felicitamos por unirte a nuestra comunidad y esperamos que disfrutes de todas las ventajas que ofrecemos. No dudes en explorar todas las funcionalidades y sacar elmaximo provecho de nuestra plataforma.</p>
     <p>Atentamente,</p>
     <p>Gabriel y Luisa<br>
     Administradores<br>
@@ -106,7 +108,7 @@ export const generar = async (req, res) => {
 
 
   // Opciones para la generación del PDF
-  const options = { format: 'Letter' }; // Formato de página
+  const options = { format: 'Letter', phantomPath: phantomjs.path  }; // Formato de página
 
 
   // Convertir HTML a PDF

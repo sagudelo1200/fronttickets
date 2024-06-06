@@ -3,10 +3,10 @@ import{config} from "dotenv";
 import { localsName } from 'ejs';
 config()
 
-//Listar Login
+//Listar Usuarios
 export const listarLogin = (req, res)=>{
 
-    const url = process.env.URL_BACK + "/usuario";
+    const url = process.env.URL_BACK + "/api/usuario";
 
     fetch(url)
     .then(respuesta=>respuesta.json())
@@ -23,7 +23,7 @@ export const listarLogin = (req, res)=>{
 
 //Registrar usuario
 export const registrarUsuario = (req, res) => {
-    res.render("login.html", 
+    res.render("views.login.ejs", 
     {
         "datos":"luisa", 
         "data": data
@@ -54,7 +54,7 @@ export const validarToken = (token) => {
 
 //Salir de la pagina
 export const salirLogin = (req, res) => {
-    res.redirect("/login.html");
+    res.redirect("/login");
 }
 
 //Ir al inicio de la pagina
