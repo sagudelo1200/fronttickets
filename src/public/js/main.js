@@ -45,7 +45,7 @@ const registrarUsuario = (req, res) => {
     const nombre = document.getElementById('nombre').value;
     const contrasena = document.getElementById('contrasena').value;
   
-    const url = "https://backlogin-production.up.railway.app/usuario";
+    const url = "https://backlogin-production.up.railway.app/api/usuario";
 
     
     const headers = {

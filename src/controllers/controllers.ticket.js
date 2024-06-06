@@ -18,20 +18,10 @@ export const listarTicket = async(req, res) => {
 
     console.log(url);
 
-    // const blob = new Blob([string], {
-    //     type: 'image/jpeg' // or whatever your Content-Type is
-    //   });
-    // const string = await blob.text();
 
     fetch(url)
     .then(respuesta=>respuesta.json())
     .then(data=>{
-        // const type = blob.type;
-        // const blob2 = new Blob([string], {type: type});
-        // data.forEach(element => {
-        //     element = createObjectURL(element.archivo)
-        // });
-        // sessionStorage.setItem("urlBtk", urlBtk);
         res.render("views.listatickets.ejs",
         {
             "datos": "ho@gmail.com",
