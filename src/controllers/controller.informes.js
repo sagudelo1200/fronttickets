@@ -1,8 +1,5 @@
 import { create } from 'html-pdf';
 import { exec } from 'child_process';
-import phantomjs from 'phantomjs-prebuilt';
-const options = { phantomPath: phantomjs.path };
-
 
 export const generar = async (req, res) => {
 
@@ -108,7 +105,7 @@ export const generar = async (req, res) => {
 
 
   // Opciones para la generación del PDF
-  const options = { format: 'Letter', phantomPath: phantomjs.path  }; // Formato de página
+  const options = { format: 'Letter' }; // Formato de página
 
 
   // Convertir HTML a PDF
