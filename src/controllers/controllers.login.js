@@ -11,7 +11,7 @@ export const listarLogin = (req, res)=>{
     fetch(url)
     .then(respuesta=>respuesta.json())
     .then(data=>{
-        res.render("views.login.ejs",
+        res.render("views.listausuario.ejs",
         {
             "datos": "hola@gmail.com",
             "data":data
@@ -62,5 +62,13 @@ export const inicio = (req, res) => {
     res.render("views.inicio.ejs", {"datos":"Luisa"});
 }
 
+
+export const ingresarLogin = (req, res) => {
+    const url = process.env.URL_BACK;
+    
+    res.render("views.login.ejs", {
+        url: url,
+    });
+}
 
 

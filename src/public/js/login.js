@@ -3,6 +3,8 @@
 const logueese = () => {
     const user = document.getElementById("user");
     const password = document.getElementById("password");
+    const urlLogin = document.getElementById("url").value;
+    sessionStorage.setItem("urlLogin", urlLogin);
 
 
     let option = {
@@ -15,7 +17,7 @@ const logueese = () => {
             "password":password.value
         })
     }
-    let url = "https://backlogin-production.up.railway.app/api/login";
+    let url = urlLogin+"/api/login";
 
     
     fetch(url, option)

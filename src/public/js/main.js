@@ -157,8 +157,10 @@ const modificarUsuario = () => {
     const user = document.getElementById('user').value;
     const name = document.getElementById('name').value;
     const password = document.getElementById('password').value;
+
+    const urlLogin = sessionStorage.getItem("urlLogin");
   
-    const url = "https://backlogin-production.up.railway.app/api/usuario";
+    const url = urlLogin + "/api/usuario";
 
     let token = "";
     const cookieToken = document.cookie;
