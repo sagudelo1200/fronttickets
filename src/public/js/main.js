@@ -452,7 +452,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Respuestas predefinidas
         const responses = {
             'hola': '¡Hola! ¿En qué puedo ayudarte?',
+            'como estás': 'Muy bien! y tu, con qué puedo ayudarte?',
             'necesito ayuda con un problema': '¡Claro! Cuentame tu problema.',
+            'la pagina tarda mucho en cargar': 'A veces, la caché del navegador puede estar llena o corrompida, lo que ralentiza la carga de páginas. Puedes intentar limpiar el cacheé de tu navegador',
             'tengo problemas para iniciar sesion': 'Asegúrate de que estás ingresando tu nombre de usuario y contraseña correctos. Verifica que la tecla de bloqueo de mayúsculas no esté activada',
             'muchas gracias': 'Espero que te haya servido la ayuda.'
         };
