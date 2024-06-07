@@ -44,7 +44,7 @@
 <div class="box-body">
     <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
       <thead>
-      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Usuario</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Nombre</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">clave</th>
+      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Id</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Usuario</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Nombre</th>
     </thead>
       </thead>
       <!-- Traer y ver la lista de los usuarios -->
@@ -53,7 +53,7 @@
         <td class=><%= registro.iduser %></td>
         <td> <%= registro.user %></td>
         <td> <%= registro.name %></td>
-        <td> <%= registro.password %></td>
+         <input type="hidden" id="<%= registro.password %>">
         <td>  <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-info"
             onclick="cargarUsuario(event)">Modifica</button> </td>
         <td>
