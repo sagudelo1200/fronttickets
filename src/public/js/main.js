@@ -306,10 +306,8 @@ const atencionTicket = (req, res) => {
     const estado_ticket = document.getElementById('estado_ticket').value;
     const solucion = document.getElementById('solucion').value;
   
-    const urlTickets = sessionStorage.getItem("urlTickets");
   
-    const url = urlLogin + "/api/solucion";
-    
+    const url = "https://backtickets-production.up.railway.app/api/solucion";
 
 
     const headers = {
