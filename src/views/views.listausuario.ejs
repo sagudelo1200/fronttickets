@@ -53,7 +53,6 @@
         <td class=><%= registro.iduser %></td>
         <td> <%= registro.user %></td>
         <td> <%= registro.name %></td>
-         <input type="hidden" id="<%= registro.password %>">
         <td>  <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-info"
             onclick="cargarUsuario(event)">Modifica</button> </td>
         <td>
@@ -62,7 +61,7 @@
                 <button type="button" class="btn btn-success" id="elimina" onclick="reporte(event)">Reporte</button></td>
             <% }) %>
 
-            
+            <input type="hidden" id="password">
       
     </table></div></div>
     </div></div>
