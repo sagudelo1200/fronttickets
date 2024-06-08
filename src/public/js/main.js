@@ -64,15 +64,16 @@ const registrarUsuario = (req, res) => {
         }),
         headers
     }
+   
     // El Fetch realiza solicitudes http para obtener o enviar datos
     fetch(url, options)
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            alert('Registro guardado' + data)
+            alertify.success('Registro guardado' + data)
         })
         .catch(error => {
-            alert("Error al guardar el registro", error)
+            alertify.error("Error al guardar el registro", error)
         })
 }
 

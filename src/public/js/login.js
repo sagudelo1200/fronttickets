@@ -16,25 +16,28 @@ const logueese = () => {
             "user":user.value,
             "password":password.value
         })
+        
     }
+    
     let url = urlLogin+"/api/login";
 
     
     fetch(url, option)
     .then(res => res.json())
     .then(data => {
-
+        
         document.cookie= `token=${data.token}`;
         console.log(data.token);
         if(data.token !== undefined){
-        window.location.href="/inicio";
+            window.location.href="/inicio";
+            alertify.success('usuario valido');
         }else{
             alertify.error('Clave errada');
         }
-
+       
     })
     .catch(error => console.error(error.message));
-
+    
 }
 
 //Diseño en movimiento de el login
@@ -49,5 +52,4 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
-
 
