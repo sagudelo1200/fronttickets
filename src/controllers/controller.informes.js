@@ -92,7 +92,7 @@ export const generar = async (req, res) => {
       <p><span>Usuario:</span> ${user}</p>
       <p><span>Nombre:</span> ${name}</p>
     </div>
-    <p>Te felicitamos por unirte a nuestra comunidad y esperamos que disfrutes de todas las ventajas que ofrecemos. No dudes en explorar todas las funcionalidades y sacar elmaximo provecho de nuestra plataforma.</p>
+    <p>Te felicitamos por unirte a nuestra comunidad y esperamos que disfrutes de todas las ventajas que ofrecemos. No dudes en explorar todas las funcionalidades y sacar el maximo provecho de nuestra plataforma.</p>
     <p>Atentamente,</p>
     <p>Gabriel y Luisa<br>
     Administradores<br>

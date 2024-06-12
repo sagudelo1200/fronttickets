@@ -1,4 +1,5 @@
 
+
 //Para poder iniciar sesión con token incluido
 const logueese = () => {
     const user = document.getElementById("user");
@@ -18,14 +19,14 @@ const logueese = () => {
         })
         
     }
-    
+
     let url = urlLogin+"/api/login";
 
     
     fetch(url, option)
     .then(res => res.json())
     .then(data => {
-        
+
         document.cookie= `token=${data.token}`;
         console.log(data.token);
         if(data.token !== undefined){
@@ -34,10 +35,9 @@ const logueese = () => {
         }else{
             alertify.error('Clave errada');
         }
-       
     })
     .catch(error => console.error(error.message));
-    
+
 }
 
 //Diseño en movimiento de el login
